@@ -26,8 +26,19 @@ LOGS =>
 
 */
 
-function triangles() {
-  
+
+function triangles(size) {
+  /*if (size < 1) {
+    return;
+  }
+  let level = '';
+  for (let i = 1 ; i <= size; i++) {
+    
+    for (let j = 1 ; j <= size; j++) {
+      level += '#';
+    }
+    console.log(level);
+  }*/
 }
 
 
@@ -48,7 +59,16 @@ on the number:
 */
 
 function fizzBuzz(start, end) {
-  
+  for (let i = start; i <= end; i++) {
+    let out = i;
+    if (i % 3 === 0) {
+      out = 'fizz'
+    }
+    if (i % 5 === 0) {
+      out += 'fizz'
+    }
+    console.log(out); 
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
