@@ -26,9 +26,18 @@ LOGS =>
 
 */
 
-function triangles() {
-  
-}
+function triangles(size) {
+  const level = function(size) {
+  let blocks = "";
+  for (let i = 1; i <= size; i++ ) {
+    blocks += '#';
+  }
+  return blocks;
+  };
+  for (let i = 1; i <= size; i++ ) {
+      console.log(level(i));
+  }
+} 
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -92,8 +101,29 @@ LOGS =>
 */
 
 function drawChessboard(x) {
-
-
+  const isEven = (num) => (num % 2 === 0);
+  let chessBoard = '';
+  let row = '';
+  for (let row = 1; row <= x; row++) {
+    let blocks = '';
+    for (let col = 1; col <= x; col++) {
+      if (isEven(row)) {
+        if(isEven(col)) {
+          blocks += ' ';
+        } else {
+          blocks += '#';
+        }
+      } else {
+        if(isEven(col)) {
+          blocks += '#';
+        } else {
+          blocks += ' ';
+        }
+      }
+    }
+    chessBoard += blocks + '\n'; 
+  }
+  console.log(chessBoard);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
