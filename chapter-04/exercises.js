@@ -61,9 +61,9 @@ function reverseArrayInPlace(array) {
 function arrayToList(array) {
   let list = {}
   for (let i = array.length; i >= 0; i--) {
-    list.value = array[i];
-    list.rest = {null}
+  list = prepend(array[i],list) 
   }
+  return list;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -77,9 +77,16 @@ function listToArray() {
 ////////////////////////////////////////////////////////////////////////////////
 // prepend /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function prepend() {
-
+/*
+akes an element and a list and 
+creates a new list that adds the element 
+to the front of the input list, 
+*/ 
+function prepend(element, list) {
+  let newList = {};
+  newList.value = element;
+  newList.rest = list;
+  return newList;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
