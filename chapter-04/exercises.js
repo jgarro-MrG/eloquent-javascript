@@ -59,12 +59,13 @@ function reverseArrayInPlace(array) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function arrayToList(array) {
-  let list = {}
-  for (let i = array.length; i >= 0; i--) {
-  list = prepend(array[i],list) 
+  let list = null;
+  for (let i = array.length - 1; i >= 0; i--) {
+    list = { value: array[i], rest: list }
   }
   return list;
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // listToArray /////////////////////////////////////////////////////////////////
