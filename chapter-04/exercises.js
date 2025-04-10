@@ -123,8 +123,24 @@ function nth(list, n) {
 // deepEqual ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function deepEqual() {
+function deepEqual(foo, bar) {
+  /*
+  let result = false
+  if (foo === null && bar === null) {
+    result = true
+  } else if (typeof foo === 'number' && typeof bar === 'number') {
+    result = foo === bar;
+  } else if (true && !foo === true && !bar) {
+    result = false;
+  } else if (foo && bar) {
+    result = true;
+  } else if (Object.keys(foo).length === Object.keys(bar).length) {
+    
+  }
+  
 
+  return result;
+  */
 }
 
 ////////////////////////////////////////////////////////////////////////////////
