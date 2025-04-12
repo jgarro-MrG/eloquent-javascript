@@ -124,13 +124,30 @@ function nth(list, n) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function deepEqual(foo, bar) {
+
   if (typeof foo !== 'object' && typeof bar !== 'object')  {
     return foo === bar;
   }
+
   if (typeof foo !== 'object' || typeof bar !== 'object')  {
     return false;
   }
-  
+
+  const fooKeys = Object.keys(foo);
+  const barKeys = Object.keys(bar);
+
+  if (fooKeys.length !== barKeys.length) {
+    return false;
+  }
+
+  for (let i = 0; fooKeys.length; i++) {
+    if (!barKeys.includes(fooKeys[i]) || !deepEqual(foo[fooKeys[i]], bar[barKeys[i]])) {
+      return false;
+    } else {
+      return true;
+    } 
+  }
+  return true;
   /*
   
   if (foo === null && bar === null) {
