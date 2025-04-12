@@ -124,8 +124,15 @@ function nth(list, n) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function deepEqual(foo, bar) {
+  if (typeof foo !== 'object' && typeof bar !== 'object')  {
+    return foo === bar;
+  }
+  if (typeof foo !== 'object' || typeof bar !== 'object')  {
+    return false;
+  }
+  
   /*
-  let result = false
+  
   if (foo === null && bar === null) {
     result = true
   } else if (typeof foo === 'number' && typeof bar === 'number') {
