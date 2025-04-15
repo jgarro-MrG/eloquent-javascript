@@ -77,6 +77,18 @@ describe('Eloquent JavaScript', function () {
           expect(every([], n => n < 10)).to.equal(true);
         });
       });
+
+      describe("everyAlt", function () {
+        it("should determine if every value passes a test", function () {
+          expect(everyAlt([1, 3, 5], n => n < 10)).to.equal(true);
+        });
+        it("should determine if every value passes a test", function () {
+          expect(everyAlt([2, 4, 16], n => n < 10)).to.equal(false);
+        });
+        it("should determine if every value passes a test", function () {
+          expect(everyAlt([], n => n < 10)).to.equal(true);
+        });
+      });
       
       describe("dominantDirection", function () {
         it("should determine dominant direction", function () {
