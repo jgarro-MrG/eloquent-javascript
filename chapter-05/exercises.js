@@ -39,7 +39,7 @@ function everyAlt(array, test) {
 // /////////////////////////////////////////////////////////////////////////////
 
 function dominantDirection(text) {
-  let ltrCount, rtlCount = 0;
+  let ltrCount = 0, rtlCount = 0;
   for (let i = 0; i < text.length; i++) {
     const script = characterScript(text.charCodeAt(i));
     if (script) {
